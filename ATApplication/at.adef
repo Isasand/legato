@@ -1,0 +1,20 @@
+executables: 
+{
+	atApp = ( atComponent )
+}
+
+processes: 
+{
+	run: 
+	{
+		( atComponent ) 
+	}
+}
+
+bindings: 
+{
+	atApp.atComponent.le_atClient -> atService.le_atClient
+	atApp.atComponent.le_mrc -> modemService.le_mrc
+	atApp.atComponent.le_data -> dataConnectionService.le_data
+}
+

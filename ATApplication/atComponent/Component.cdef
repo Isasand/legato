@@ -1,0 +1,20 @@
+sources: 
+
+{
+	at.c
+}
+
+
+requires: 
+{
+	api: 
+	{	
+		modemServices/le_mrc.api
+		atServices/le_atClient.api
+		le_data.api	
+	}
+	device:
+	{
+		[rw] /dev/ttyAT /dev/ttyAT
+	}
+}	

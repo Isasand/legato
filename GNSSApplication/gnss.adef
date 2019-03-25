@@ -1,0 +1,20 @@
+executables:
+{
+    gnss = ( gnssComponent )
+}
+ 
+processes:
+{
+    run:
+    {
+        ( gnss )
+    }
+}
+
+bindings:
+{
+	gnss.gnssComponent.le_gnss -> positioningService.le_gnss
+	gnss.gnssComponent.le_posCtrl -> positioningService.le_posCtrl
+	gnss.gnssComponent.le_pos -> positioningService.le_pos
+	gnss.gnssComponent.le_data -> dataConnectionService.le_data
+}
